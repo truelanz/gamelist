@@ -1,4 +1,4 @@
-package com.truelanz.yourgamelist.entities;
+package com.truelanz.gamelist.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,21 +18,21 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true) //incluir somente os EqualsAndHashCode.Include 
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // incluir somente os EqualsAndHashCode.Include
 public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//usar id como key
-    @EqualsAndHashCode.Include //incluiur hashcode and equals no id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // usar id como key
+    @EqualsAndHashCode.Include // incluiur hashcode and equals no id
     private Long id;
     private String title;
-    @Column(name = "game_year") //mudar nome no banco de dados
+    @Column(name = "game_year") // mudar nome no banco de dados
     private Integer year;
     private String genre;
     private String platforms;
     private Double score;
     private String imgUrl;
-    @Column(columnDefinition = "TEXT") //aceita mais que 255 characters
+    @Column(columnDefinition = "TEXT") // aceitar mais que 255 characters
     private String shortDescription;
     @Column(columnDefinition = "TEXT")
     private String longDescription;

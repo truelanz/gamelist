@@ -1,12 +1,12 @@
-package com.truelanz.yourgamelist;
+package com.truelanz.gamelist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class YourgamelistApplication {
+public class GamelistApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(YourgamelistApplication.class, args);
+		SpringApplication.run(GamelistApplication.class, args);
 	}
 }

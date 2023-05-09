@@ -1,0 +1,4 @@
+
+
+O Service chama o Repository: @Autowired GameRepository gameRepository;
+O Controller chama o Service: @Autowired GameService gameService;

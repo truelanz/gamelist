@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.truelanz</groupId>
-	<artifactId>yourgamelist</artifactId>
+	<artifactId>gamelist</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>yourgamelist</name>
+	<name>gamelist</name>
 	<description>User can create list of games for different usage purposes.</description>
 	<properties>
 		<java.version>17</java.version>
