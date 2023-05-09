@@ -13,25 +13,28 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "table_game")
+@Table(name = "tb_game")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) //incluir somente os EqualsAndHashCode.Include 
 public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//usar id como key
+    @EqualsAndHashCode.Include //incluiur hashcode and equals no id
     private Long id;
-    private String tittle;
-    @Column(name = "game_year")
+    private String title;
+    @Column(name = "game_year") //mudar nome no banco de dados
     private Integer year;
     private String genre;
-    private String platform;
+    private String platforms;
+    private Double score;
     private String imgUrl;
+    @Column(columnDefinition = "TEXT") //aceita mais que 255 characters
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
 }
