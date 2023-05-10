@@ -21,9 +21,7 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
-    }
-
-    
+    }   
 }
 
 
