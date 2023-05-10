@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.truelanz.gamelist.dto.GameDTO;
+import com.truelanz.gamelist.dto.GameListDTO;
 import com.truelanz.gamelist.dto.GameMinDTO;
 import com.truelanz.gamelist.entities.Game;
+import com.truelanz.gamelist.entities.GameList;
+import com.truelanz.gamelist.repositories.GameListRepository;
 import com.truelanz.gamelist.repositories.GameRepository;
 
 
