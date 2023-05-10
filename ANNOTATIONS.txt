@@ -1,9 +1,0 @@
-
-Passo a passo:
-
-Criar entities(ORM)/ Game.java, com id, getter/setter, constructors vazio e cheio, @Table(name = "nome_da_table") e demais annotations.
-Criar Repository que exetende JpaRepository<Nome_da_classe_entity, Long>
-Criar DTO que filtra os dados que serão resgatados da nossa API pelo nosso Controller.
-Criar Service, e Controller com suas devidas annotations:
-O Service chama o Repository: @Autowired GameRepository gameRepository;
-O Controller chama o Service: @Autowired GameService gameService;
