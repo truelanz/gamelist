@@ -1,6 +1,7 @@
 package com.truelanz.gamelist.dto;
 
 import com.truelanz.gamelist.entities.Game;
+import com.truelanz.gamelist.projections.GameMinProjection;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,14 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection entityProjection) {
+        id = entityProjection.getId();
+        title = entityProjection.getTitle();
+        year = entityProjection.getYear();
+        imgUrl = entityProjection.getImgUrl();
+        shortDescription = entityProjection.getShortDescription();
     }   
 }
 
