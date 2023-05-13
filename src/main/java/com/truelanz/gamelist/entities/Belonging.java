@@ -19,7 +19,6 @@ public class Belonging {
     @EmbeddedId
     @EqualsAndHashCode.Include
     private BelongingPK id = new BelongingPK();
-
     private Integer position;
 
     public Belonging(Game game, GameList list, Integer position) {
