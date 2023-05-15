@@ -41,4 +41,23 @@ public class GameService {
         List<GameMinDTO> dto = result.stream().map(x -> new GameMinDTO(x)).toList();
         return dto;
     }
+
+    @Transactional(readOnly = false)
+    public GameDTO createGame(GameDTO gameDTO) {
+        Game game = new Game();
+        game.setTitle(gameDTO.getTitle());
+        game.setYear(gameDTO.getYear());
+        game.setGenre(gameDTO.getGenre());
+        game.setPlatforms(gameDTO.getPlatforms());
+        game.setScore(gameDTO.getScore());
+        game.setImgUrl(gameDTO.getImgUrl());
+        game.setShortDescription(gameDTO.getShortDescription());
+        game.setLongDescription(gameDTO.getLongDescription());
+
+        // Salva o jogo no banco de dados
+        Game savedGame = gameRepository.save(game);
+
+        // Retorna o DTO do jogo salvo
+        return new GameDTO(savedGame);
+    }
 }
